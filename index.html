@@ -1,47 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Feria de las Plantas</title>
+    <link rel="icon" href="./assets/LogoFeriaPlantas.png" type="icon-page">
+    <title>Feria de las Plantas Jujuy</title>
 </head>
-<body>
-    
 
-    <head>
-        <nav>
-            <ul>
-                <li><a href="#nosotros">Quienes Somos </a></li>
-                <li><a href="#evento">Sobre el Evento</a></li>
-                <li><a href="#registro">Registrate</a></li>
+<body>
+    <!--Barra de Navegacion-->
+    <header id="mainheader">
+        <nav id="navbar">
+            <ul id="nav_links">
+                <li id="menu"><a href="#nosotros" id="btnav">Organizadores</a></li>
+                <li id="menu"><a href="#evento" id="btnav">Evento</a></li>
+                <li id="menu"><a href="#registro" id="btnav">Registro</a></li>
+                <li id="menu"><a href="#footer" id="btnav">Contacto</a></li>
             </ul>
         </nav>
-    </head>
+        <div class="logo">
+            <a href="#home"><img src="./assets/LogoFeriaPlantas.png" id="logo"></a>
+        </div>
+    </header>
 
+    <!--Secciones (Home, Evento, Registro, Nosotros, Climas)-->
     <main>
+        <!--Primera Seccion - HOME-->
         <section id="home">
-
+            <div clas="container">
+                <div class="home-text">
+                    <img src="./assets/LogoFeriaPlantas.png" alt="Logo Feria de las Plantas" id="logo_home">
+                    <h1 id="titulo-home">FERIA DE LAS PLANTAS</h1>
+                    <h2 id="subtitulo">Expo-feria de productores regionales</h2>
+                    <h3 id="sponsor">"Juntos potenciamos el comercio jujeño" </h3>
+                    <p id="descripcion-home">Ciudad Cultural <br>5 de Septiembre</p>
+                </div>
+                <div class="home-img">
+                    <img src="./assets/JujuyFlorece.jpg" alt="Imagen de Evento Anterior" id="jujuy_florece">
+                </div>
+            </div>
         </section>
-        
+
+        <!--Segunda Seccion - EVENTO-->
         <section id="evento">
-
+            <div class="container">
+                <div class="evento-vid">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0SnHMOv-1Sc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="evento-text">
+                    <h1>FERIA DE LAS PLANTAS</h1>
+                    <h3>Se prepara una nueva edición de la expo-feria de productores locales</h3>
+                    <p>La feria de las plantas busca visibilizar el trabajo de productores de plantas y flores de la provincia de Jujuy. <br>El evento se realizará del 5 al 7 de septiembre de 9 a 20 horas con una alegoría que habla de "un árbol feliz que sabe retoñar de sus propias heridas y cicatrices, dando flores y frutos en abundancia, es una invitación a desarrollar la resiliencia", según indicaron desde la organización.</p>
+                </div>
+            </div>
         </section>
 
+        <!--Tercera Seccion - NOSOTROS-->
         <section id="nosotros">
-            
-        </section>
-        
-        <section id="registro">
+            <div class="container">
+                <div class="nosotros-text">
+                    <h1>ORGANIZADORES</h1>
+                    <p>Ministerio de Desarrollo Económico y Producción de Jujuy en conjunto con la Asociación de Productores de Plantas Ornamentales de Jujuy (APPOJUY)</p>
+                    <h1>SOBRE LA APPOJUY</h1>
+                    <p>La Asociación de Productores de Plantas Ornamentales de Jujuy (APPOJUY) está compuesta por 50 familias jujeñas que trabajan mancomunadamente para el desarrollo de la Industria Florícola.</p>
+                </div>
+                <div class="nosotros-img">
+                    <img src="./assets/Organizadores.jpg" alt="Quienes Organizan el Evento">
+                </div>
 
+            </div>
         </section>
-    
+
+        <!--Cuarta Seccion - REGISTRO-->
+        <section id="registro">
+            <div class="container">
+                <div class="registro-text">
+                    <h1>¿Querés Participar?</h1>
+                    <p>Sumate al evento para potenciar el comercio local de la provincia. <br> Regístrate y te contactamos con los detalles y confirmación de tu inscripción</p>
+                    </a><img src="./assets/InscripcionLogo.png" alt="Logo Inscripcion Feria de las Plantas" id="logo_inscripcion">
+                </div>
+                <div class="registro-form">
+                    <h1>Registro de Participante</h1>
+                    <form id="formulario_registro">
+                        <div class="form-group">
+                            <label for="titular">Titular</label>
+                            <input type="text" class="form-control" id="titular">
+                        </div>
+                        <div class="form-group">
+                            <label for="comercio"> Stand o Comercio</label>
+                            <input type="text" class="form-control" id="comercio">
+                        </div>
+                        <div class="form-group">
+                            <label for="celular">Celular</label>
+                            <input type="text" class="form-control" id="celular" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <!--Para ENVIAR DATOS (usar js -> onclick="getValueInput()"):-->
+                        <button id="enviar" class="btn btn-light">Enviar</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Quinta Seccion - CLIMA-->
+        <section id="clima">
+            <div class="container">
+                <h1>Asi está el clima en el lugar del evento:</h1>
+            </div>
+        </section>
+ 
     </main>
 
-    <footer>
-
+    <!--footer CONTACTO-->
+    <footer id="footer">
+        <div class="contenedor-footer">
+            <div class="informacion">
+                <h2>Si tenés alguna duda o sugerencia, te podes contactar con nosotros a traves de WhatsApp:</h2>
+            </div>
+            <div class="contenedor-whatsapp">
+               
+                <img class="btn_contacto" src="./assets/LogoWhats.png" alt="Contacto WhatsApp" id="whatsapp_contacto" onclick="window.location.href='https://wa.me/3885857331?text=Hola!%20Me%20Llamo%20Micaela%20Lopez'">
+            </div>
+            <div class="informacion">
+                <h2>Micaela Lopez - Esteban Rueda</h2>
+            </div>
+            <!--<div class="contenedor-whatsapp">
+                <span class="name">Esteban Rolon</span>
+                <img class="btn_contacto" src="./assets/LogoWhats.png" alt="Contacto WhatsApp" id="whatsapp_contacto" onclick="window.location.href='https://wa.me/3886459954?text=Hola!%20Me%20Llamo%20Esteban%20Rueda'">
+            </div>-->
+        </div>
     </footer>
 
 </body>
+
 </html>

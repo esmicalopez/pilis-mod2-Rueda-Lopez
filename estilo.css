@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+html,body{
+    background-color: darkseagreen;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+/*Reset*/
+*{
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+header{
+    background-color:rgba(201, 154, 35, 0.888);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    font-size: x-large;
+}
+/*BARRA DE NAVEGACION*/
+ul#nav_links{
+    list-style: none;
+    transition: all 0.3s;
+}
+li#menu{
+    display: inline-block;
+    padding: 0 20px;
+    transition: all 0.3;
+}
+li#menu:hover{
+    transform: scale(1.1);
+}
+a#btnav{
+    font-size: 700;
+    color: black;
+    text-decoration: none;
+}
+img#logo{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+img#logo:hover{
+    transform: scale(1.2);
+}
+
+/*Contenedores*/
+
+.container {
+    margin: auto;
+    overflow: auto;
+    padding: 0 10px;
+}
+
+/*SECCIONES*/
+
+/*HOME*/
+#home{
+    background-color:rgb(236, 204, 178);
+    padding: 3%;
+    overflow: hidden;
+    text-align: center;
+}
+.home-img{
+    float: right;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+.home-text{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+}
+img#logo_home{
+    width: 35%;
+}
+
+/*EVENTO*/
+#evento{
+    background-color: rgb(222, 182, 171);
+    padding: 3%;
+    overflow: hidden;
+    text-align: justify;
+}
+.evento-vid{
+    float: left;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+.evento-text{
+    float: right;
+    width: 50%;
+    overflow: hidden;
+}
+
+/*NOSOTROS*/
+#nosotros{
+    background-color:rgb(236, 204, 178);
+    padding: 3%;
+    overflow: hidden;
+    text-align: center;
+}
+.nosotros-img{
+    float: right;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+.nosotros-img img {
+    width:300px;
+    height:300px;
+}
+.nosotros-text{
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+/*REGISTRO*/
+#registro{
+    background-color: rgb(222, 182, 171);
+    padding: 3%;
+    overflow: hidden;
+}
+.registro-form {
+    float: right;
+    width: 50%;
+}
+.registro-text {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+form .form-control {
+    width: 100%;
+    border: none;
+    line-height: 1.7;
+}
+img#logo_inscripcion{
+    width: 20%;
+}
+
+/*CLIMA*/
+#clima{
+    background-color: rgb(236, 204, 178);
+    padding: 3%;
+    overflow: hidden;
+}
+
+
+/*FOOTER*/
+#footer{
+    background-color:rgba(201, 154, 35, 0.888);
+    text-align: center;
+    padding: 2%;
+}
+
+#footer .contenedor-footer{
+    justify-content:space-evenly;
+    flex-direction: row;
+  }
+  #footer .contenedor-footer .contenedor-whatsapp{
+    flex-direction: row;
+  }
+  #footer .contenedor-footer .contenedor-whatsapp .whatsapp_contacto .name{
+    padding-top: 10px;
+    vertical-align: center;
+  }
+
+img#whatsapp_contacto{
+    width: 80px;
+
+}
+
