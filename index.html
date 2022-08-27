@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="icon" href="./assets/LogoFeriaPlantas.png" type="icon-page">
+    <!-- fontawesome y sweetalert -->
+    <script src="https://kit.fontawesome.com/9e67f5c26b.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Feria de las Plantas Jujuy</title>
 </head>
 
@@ -17,7 +20,7 @@
             <ul id="nav_links">
                 <li id="menu"><a href="#nosotros" id="btnav">Organizadores</a></li>
                 <li id="menu"><a href="#evento" id="btnav">Evento</a></li>
-                <li id="menu"><a href="#registro" id="btnav">Registro</a></li>
+                <li id="menu"><a href="#registration" id="btnav">Registro</a></li>
                 <li id="menu"><a href="#footer" id="btnav">Contacto</a></li>
             </ul>
         </nav>
@@ -56,7 +59,11 @@
                 <div class="evento-text">
                     <h1>FERIA DE LAS PLANTAS</h1>
                     <h3>Se prepara una nueva edición de la expo-feria de productores locales</h3>
-                    <p>La feria de las plantas busca visibilizar el trabajo de productores de plantas y flores de la provincia de Jujuy. <br>El evento se realizará del 5 al 7 de septiembre de 9 a 20 horas con una alegoría que habla de "un árbol feliz que sabe retoñar de sus propias heridas y cicatrices, dando flores y frutos en abundancia, es una invitación a desarrollar la resiliencia", según indicaron desde la organización.</p>
+                    <p>La feria de las plantas busca visibilizar el trabajo de productores de plantas y flores de la
+                        provincia de Jujuy. <br>El evento se realizará del 5 al 7 de septiembre de 9 a 20 horas con una
+                        alegoría que habla de "un árbol feliz que sabe retoñar de sus propias heridas y cicatrices,
+                        dando flores y frutos en abundancia, es una invitación a desarrollar la resiliencia", según
+                        indicaron desde la organización.</p>
                 </div>
             </div>
         </section>
@@ -66,9 +73,11 @@
             <div class="container">
                 <div class="nosotros-text">
                     <h1>ORGANIZADORES</h1>
-                    <p>Ministerio de Desarrollo Económico y Producción de Jujuy en conjunto con la Asociación de Productores de Plantas Ornamentales de Jujuy (APPOJUY)</p>
+                    <p>Ministerio de Desarrollo Económico y Producción de Jujuy en conjunto con la Asociación de
+                        Productores de Plantas Ornamentales de Jujuy (APPOJUY)</p>
                     <h1>SOBRE LA APPOJUY</h1>
-                    <p>La Asociación de Productores de Plantas Ornamentales de Jujuy (APPOJUY) está compuesta por 50 familias jujeñas que trabajan mancomunadamente para el desarrollo de la Industria Florícola.</p>
+                    <p>La Asociación de Productores de Plantas Ornamentales de Jujuy (APPOJUY) está compuesta por 50
+                        familias jujeñas que trabajan mancomunadamente para el desarrollo de la Industria Florícola.</p>
                 </div>
                 <div class="nosotros-img">
                     <img src="./assets/Organizadores.jpg" alt="Quienes Organizan el Evento">
@@ -78,47 +87,46 @@
         </section>
 
         <!--Cuarta Seccion - REGISTRO-->
-        <section id="registro">
+        <section id="registration">
             <div class="container">
-                <div class="registro-text">
+                <div class="registration-text">
                     <h1>¿Querés Participar?</h1>
-                    <p>Sumate al evento para potenciar el comercio local de la provincia. <br> Regístrate y te contactamos con los detalles y confirmación de tu inscripción</p>
-                    </a><img src="./assets/InscripcionLogo.png" alt="Logo Inscripcion Feria de las Plantas" id="logo_inscripcion">
+                    <p>Regístrate y te contactamos con los detalles y confirmación de tu inscripción</p>
+                    </a><img src="./assets/InscripcionLogo.png" alt="Logo Inscripcion Feria de las Plantas"
+                        id="logo_inscripcion">
+                    <p><b>Sumate al evento para potenciar el comercio local de la provincia.</b></p>
                 </div>
-                <div class="registro-form">
-                    <h1>Registro de Participante</h1>
-                    <form id="formulario_registro">
+                <div class="registration-form">
+                    <h1><span class=" ">Registro de Participante</span></h1>
+                    <form id="formulario">
                         <div class="form-group">
-                            <label for="titular">Titular</label>
-                            <input type="text" class="form-control" id="titular">
+                            <label for="comercio">Stand o Comercio</label>
+                            <input id="comercio" class="form-control" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="comercio"> Stand o Comercio</label>
-                            <input type="text" class="form-control" id="comercio">
+                            <label for="titular">Titular</label>
+                            <input id="titular" class="form-control" type="text">
                         </div>
                         <div class="form-group">
                             <label for="celular">Celular</label>
-                            <input type="text" class="form-control" id="celular" maxlength="10">
+                            <input class="form-control" id="celular" cols="30" rows="10"></input>
                         </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <!--Para ENVIAR DATOS (usar js -> onclick="getValueInput()"):-->
-                        <button id="enviar" class="btn btn-light">Enviar</button>
-                    </form>
-
+                        <button id="enviar" class="btn btn-light" onclick="getValueInput()">Enviar</button>
                 </div>
             </div>
         </section>
 
         <!--Quinta Seccion - CLIMA-->
         <section id="clima">
-            <div class="container">
+            <div id="clima-container">
                 <h1>Asi está el clima en el lugar del evento:</h1>
+                <h2 id="ubicacion"></h2>
+                <h2 id="temperatura-valor"></h2>
+                <h2 id="temperatura-descripcion"></h2>
+                <img id="icono-animado" alt="Logo Animado Clima">
             </div>
         </section>
- 
+
     </main>
 
     <!--footer CONTACTO-->
@@ -128,19 +136,15 @@
                 <h2>Si tenés alguna duda o sugerencia, te podes contactar con nosotros a traves de WhatsApp:</h2>
             </div>
             <div class="contenedor-whatsapp">
-               
-                <img class="btn_contacto" src="./assets/LogoWhats.png" alt="Contacto WhatsApp" id="whatsapp_contacto" onclick="window.location.href='https://wa.me/3885857331?text=Hola!%20Me%20Llamo%20Micaela%20Lopez'">
+                <img class="btn_contacto" src="./assets/LogoWhats.png" alt="Contacto WhatsApp" id="whatsapp_contacto"
+                    onclick="window.location.href='https://wa.me/3885857331?text=¡Hola!%20Somos%20Esteban%20Rueda%20y%20Micaela%20Lopez.%20Formamos%20parte%20del%20Ministerio%20de%20Desarrollo%20Económico%20y%20Producción%20de%20Jujuy%20¿Como%20podemos%20ayudarte?'">
             </div>
             <div class="informacion">
                 <h2>Micaela Lopez - Esteban Rueda</h2>
             </div>
-            <!--<div class="contenedor-whatsapp">
-                <span class="name">Esteban Rolon</span>
-                <img class="btn_contacto" src="./assets/LogoWhats.png" alt="Contacto WhatsApp" id="whatsapp_contacto" onclick="window.location.href='https://wa.me/3886459954?text=Hola!%20Me%20Llamo%20Esteban%20Rueda'">
-            </div>-->
         </div>
     </footer>
 
 </body>
-
+<script src="./main.js"></script>
 </html>

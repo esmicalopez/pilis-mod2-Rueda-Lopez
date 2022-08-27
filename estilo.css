@@ -120,28 +120,58 @@ img#logo_home{
     overflow: hidden;
     text-align: center;
 }
-/*REGISTRO*/
-#registro{
+
+/*Registro*/
+
+#registration {
     background-color: rgb(222, 182, 171);
     padding: 3%;
     overflow: hidden;
 }
-.registro-form {
-    float: right;
-    width: 50%;
-}
-.registro-text {
+.registration-text {
     float: left;
     width: 50%;
+    overflow: hidden;
     text-align: center;
 }
-form .form-control {
-    width: 100%;
-    border: none;
-    line-height: 1.7;
+.registration-form{
+    float: right;
+    width: 50%;
+    overflow: hidden;
+    font-size: medium;
 }
+form .form-control {
+     width: 100%;
+     font-size: 20px;
+     line-height: 1.5;
+     border: none;
+}
+
 img#logo_inscripcion{
     width: 20%;
+}
+   
+/* Boton Form */
+.btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 14px 23px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.btn-light {
+    background: darkseagreen;
+    border: 1px solid rgb(87, 111, 114);
+    color: black;
+    width: 100%;
+}  
+.btn-light:hover {
+    background: rgb(87, 111, 114);
+    border: 1px solid darkseagreen;
+    color: white;
 }
 
 /*CLIMA*/
@@ -149,6 +179,11 @@ img#logo_inscripcion{
     background-color: rgb(236, 204, 178);
     padding: 3%;
     overflow: hidden;
+    text-align: center;
+}
+img#icono-animado{
+    width: 200px;
+    height: 200px;
 }
 
 
@@ -158,21 +193,18 @@ img#logo_inscripcion{
     text-align: center;
     padding: 2%;
 }
-
 #footer .contenedor-footer{
     justify-content:space-evenly;
     flex-direction: row;
-  }
-  #footer .contenedor-footer .contenedor-whatsapp{
-    flex-direction: row;
-  }
-  #footer .contenedor-footer .contenedor-whatsapp .whatsapp_contacto .name{
+}
+#footer .contenedor-footer .contenedor-whatsapp .whatsapp_contacto .name{
     padding-top: 10px;
     vertical-align: center;
-  }
-
+    cursor: pointer;
+}
 img#whatsapp_contacto{
     width: 80px;
-
+    cursor: pointer;
 }
+
 
